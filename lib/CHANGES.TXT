@@ -1,0 +1,26 @@
+cArticle.pas:
+function TArticle.GetHeader(Const HdrName: String): String;
+Var AktValue: String;
+begin
+  FindHeader(HdrName, AktValue);
+  //GoldFind 3: Wir dekodieren automatisch
+  AktValue := DecodeHeaderValue(AktValue[1], length(AktValue));
+  Result := AktValue
+end;
+
+
+
+uDateTime.pas:
+type
+   tDateTimeArr = array of tDateTime;
+
+
+
+kProgress.pas:
+  in Show und ShowModal fAbort := false;
+  property Shown : Boolean read IsShow;
+
+(setMin)  
+  if (fMin<=fMax) then
+(hide) 
+  (Owner as tForm).repaint;
